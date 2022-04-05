@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Images</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-container">
+        <picture>
+          <source
+            media="(min-width: 320px)"
+            srcset="
+              ./img/the-big-picture-1024.jpg 1024w,
+              ./img/the-big-picture-640.jpg   640w,
+              ./img/the-big-picture-320.jpg   320w
+            "
+            sizes="60vw"
+          />
+          <source
+            srcset="
+              ./img/the-big-picture-large-cropped.jpg 2x,
+              ./img/the-big-picture-small-cropped.jpg 1x
+            "
+          />
+          <img src="./img/the-big-picture.jpg" alt="fancy view of canon with a person standing on the side" />
+        </picture>
+        <div class="img-container">
+          <picture>
+            <source
+              media="(min-width: 320px)"
+              srcset="
+                ./img/past-present-and-future-1024.jpg 1024w,
+                ./img/past-present-and-future-640.jpg   640w,
+                ./img/past-present-and-future-320.jpg   320w
+              "
+              sizes="60vw"
+            />
+            <source
+              srcset="
+                ./img/past-present-and-future-large-cropped.jpg 2x,
+                ./img/past-present-and-future-small-cropped.jpg 1x
+              "
+            />
+            <img src="./img/past-present-and-future.jpg" alt="family on a trail cover by trees" />
+          </picture>
+      </div>
+    </div>
+  </body>
+</html>
